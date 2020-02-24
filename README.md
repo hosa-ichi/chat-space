@@ -13,8 +13,8 @@
 
 ## usersテーブル
 
-|user_name|string|null: false, unique:true|
-|user_email|string|null: false, unique:true|
+|name|string|null: false, unique:true|
+|email|string|null: false, unique:true|
 
 ### Association
 has_many :messages
@@ -23,7 +23,7 @@ has_many :groups, through: :groups_users
 
 ## groupsテーブル
 
-|group_name|string|null: false, |
+|name|string|null: false, |
 
 ### Association
 has_many :messages
