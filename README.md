@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, |
-|image|sting|null: false, |
+|body|text||
+|image|sting||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
