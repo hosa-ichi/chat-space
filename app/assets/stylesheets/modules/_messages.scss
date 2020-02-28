@@ -17,7 +17,7 @@
       display: flex;
       justify-content: space-between;
       line-height: 20px;
-      color: #ffffff;
+      color: $mainWhiteColor;
       }
       .TopItems--icons {
         width: 60px;
@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
         a {
-          color: #ffffff;
+          color: $mainWhiteColor;
           margin: 0 5px;
           text-align: right;
           text-decoration: none;
@@ -40,13 +40,13 @@
       margin: 0 20px;
     }
       .name {
-        color: #ffffff;
+        color: $mainWhiteColor;
         font-weight: bold;
         font-size: 15px;
         padding: 20px 0 0 0;
     }
     .message {
-        color: #ffffff;
+        color: $mainWhiteColor;
         font-weight: bold;
         font-size: 11px;
         padding: 5px 40px 0 0;
@@ -59,17 +59,17 @@
   flex-direction: column;
   .GroupInfo {
     height:100px;
-    background-color: #ffffff;
+    background-color: $mainWhiteColor;
     display: flex;
       justify-content: space-between;
   }
     .name {
-      color: #333333;
+      color: $nameBlackColor;
       font-size: 20px;
       padding: 35px 0 0 40px;
     }
       .member {
-        color: #999999;
+        color: $mainGlayColor;
         font-size: 12px;
         padding: 15px 0 0 0;
       }
@@ -86,7 +86,7 @@
     }
   .Message--list {
     height: calc(100vh - 190px);
-    background-color: #fafafa;
+    background-color: $subWhiteColor;
     padding: 0 0 0 40px;
   }
     .list1 {
@@ -94,16 +94,16 @@
       justify-content: flex-start;
       padding: 35px 0 0 0;
       .list1--name {
-        color: #333333;
+        color: $nameBlackColor;
         font-size: 16px;
         }
       .list1--date {
-        color: #999999;
+        color: $mainGlayColor;
         font-size: 12px;
         }
     }
     .massege1 {
-      color: #434A54;
+      color: $mainMessageColor;
       font-size: 14px;
     }
     .list2 {
@@ -112,15 +112,15 @@
       padding: 46px 0 0;
       }
       .list2--name {
-        color: #333333;
+        color: $nameBlackColor;
         font-size: 16px;
       }
       .list2--date {
-        color: #999999;
+        color: $mainGlayColor;
         font-size: 12px;
       }
     .massege2 {
-      color: #434A54;
+      color: $mainMessageColor;
       font-size: 14px;
     }
   .Message--form {
@@ -159,7 +159,7 @@
             height: 50px;
             margin-left: 15px;
             background-color: #38aef0;
-            color: #fafafa;
+            color: $subWhiteColor;
             text-align: center;
             line-height: 50px;
           }
