@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+.SideBar {
+  width:300px;
+  float: left;
+  .UserName {
+    height:100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    .TopItems {
+      height: 20px;
+      width: 100%;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      color: $mainWhiteColor;
+      }
+      .TopItems--icons {
+        width: 60px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          color: $mainWhiteColor;
+          margin: 0 5px;
+          text-align: right;
+          text-decoration: none;
+        }
+      }
+  }
+  .SideBar__GroupList {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+  }
+    .items {
+      margin: 0 20px;
+    }
+      .name {
+        color: $mainWhiteColor;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 20px 0 0 0;
+    }
+    .message {
+        color: $mainWhiteColor;
+        font-weight: bold;
+        font-size: 11px;
+        padding: 5px 40px 0 0;
+    }
+}
+
+.MainChat {
+  width: calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
+  .GroupInfo {
+    height:100px;
+    background-color: $mainWhiteColor;
+    display: flex;
+      justify-content: space-between;
+  }
+    .name {
+      color: $nameBlackColor;
+      font-size: 20px;
+      padding: 35px 0 0 40px;
+    }
+      .member {
+        color: $mainGlayColor;
+        font-size: 12px;
+        padding: 15px 0 0 0;
+      }
+      .edit {
+        width: 72px;
+        height: 40px;
+        padding: 28px 20px;
+        a {
+          color: #38eaf0;
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+  .Message--list {
+    height: calc(100vh - 190px);
+    background-color: $subWhiteColor;
+    padding: 0 0 0 40px;
+  }
+    .list1 {
+      display: flex;
+      justify-content: flex-start;
+      padding: 35px 0 0 0;
+      .list1--name {
+        color: $nameBlackColor;
+        font-size: 16px;
+        }
+      .list1--date {
+        color: $mainGlayColor;
+        font-size: 12px;
+        }
+    }
+    .massege1 {
+      color: $mainMessageColor;
+      font-size: 14px;
+    }
+    .list2 {
+      display: flex;
+      justify-content: flex-start;
+      padding: 46px 0 0;
+      }
+      .list2--name {
+        color: $nameBlackColor;
+        font-size: 16px;
+      }
+      .list2--date {
+        color: $mainGlayColor;
+        font-size: 12px;
+      }
+    .massege2 {
+      color: $mainMessageColor;
+      font-size: 14px;
+    }
+  .Message--form {
+    height:90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+  }
+    .input_box {
+      display: flex;
+      justify-content: space-between;
+    }
+      .new-message {
+        display: flex;
+        justify-content: space-between;
+      }
+          .input_box {
+            width: 100%;
+            height: 50px;
+            position: relative;
+          }
+            .input_box-text {
+              width: 100%;
+              padding-left: 10px;
+            }
+            .input_box-img {
+              font-size: 1.3rem;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+            }
+            .input_box-img__file {
+              display: none;
+            }
+          .send_btn {
+            width: 100px;
+            height: 50px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            color: $subWhiteColor;
+            text-align: center;
+            line-height: 50px;
+          }
