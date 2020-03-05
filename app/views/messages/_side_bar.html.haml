@@ -1,20 +1,20 @@
 .SideBar
-  .UserName
-    .TopItems
-      .TopItems--name
+  .header
+    .items
+      .items--name
         = current_user.name
-      .TopItems--icons
+      .items--icons
         .edit
           = link_to new_group_path do
-            = icon('fas', 'pen-square', class: 'icon')
+            = icon('fa', 'pen-square', class: 'edit--icon')
         .cog
           = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog', class: 'icon')
-  .SideBar__GroupList
+            = icon('fas', 'cog', class: 'cog--icon')
+  .GroupList
     - current_user.groups.each do |group|
       .items
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .name
             = group.name
           .message
-            メッセージはまだありません。
+            = group.show_last_message

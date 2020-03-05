@@ -1,34 +1,22 @@
 .MainChat
-  .GroupInfo
+  .Message--header
     .name
-      test
+      = @group.name
       .member
-        member masa
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .edit
       .btn
-        = link_to "#" do
-          edit
+        = link_to new_group_path do
+          Edit
   .Message--list
-    .list1
-      .list1--name
-        masa
-      .list1--date
-        2019/11/20[Wed] 17:43:01
-    .massege1
-      おはよう！
-    .list2
-      .list2--name
-        masa
-      .list2--date
-        2019/11/20[Wed] 17:43:34
-    .massege2
-      今日は夜から雨
+    = render @messages
   .Message--form
-    %form.new-message
+    = form_for [@group, @message] do |f|
       .input_box
-        %input{type: "text", class: "input_box-text", placeholder: "Type a message"}
-        %label{class: "input_box-img"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input_box-img__file"}
-      .send_btn
-        Send
+        = f.text_field :content, class: 'input_box-text', placeholder: 'type a message'
+        = f.label :image, class: 'input_box-img' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input_box-img__file'
+      = f.submit 'Send', class: 'send_btn'
